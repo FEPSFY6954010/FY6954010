@@ -24,7 +24,7 @@ var urn = document.getElementById("urn");
 
 // Text change function
 function urnClear() {
-    urn.innerHTML = "Hi";
+    urn.innerHTML = "";
 }
 
 button1.addEventListener("click", urnClear);
