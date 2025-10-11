@@ -19,7 +19,7 @@ button.addEventListener("click", changeColour);
 
 // Making identifying button for URN html
 
-var button2 = document.getElementById("urn");
+var button2 = document.getElementById("clear");
 
 // Text change function
 function urnClear() {
