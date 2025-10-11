@@ -27,7 +27,7 @@ function urnClear() {
     urn.innerHTML = 'Hi';
 }
 
-button1.addEventListener("click", urnClear)
+button1.addEventListener("click", urnClear);
 
 
 
