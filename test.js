@@ -16,3 +16,17 @@ function changeColour() {
 // Adding event listener
 
 button.addEventListener("click", changeColour);
+
+// Making identifying button for URN html
+
+var button2 = document.getElementById("urn");
+
+// Text change function
+function urnClear() {
+    button2.innerHTML = '';
+}
+
+button1.addEventListener("click", urnClear)
+
+
+
