@@ -21,23 +21,13 @@ button.addEventListener("click", changeColour);
 
 var button1 = document.getElementById("hide");
 var urn = document.getElementById("urn");
-var clear = ""
+var clear = "";
 
-while (1=1) {
-    function urnclear() {
-        urn.innerHTML = clear;
+function hide() {
+        urn.innerHTML = clear        
     }
 
-    function urnappear() {
-        urn.innerHTML = "Student URN: 6954010"
-    }
-
-    button1.addEventListener("click", urnclear);
-
-    if (urn.innerHTML = clear) {
-        button1.addEventListener("click", urnappear);
-    }
-}
+    button1.addEventListener("click", hide)
 
 
 
