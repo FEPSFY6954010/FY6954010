@@ -19,7 +19,8 @@ button.addEventListener("click", changeColour);
 
 // Making identifying button for URN html
 
-var changebutton = document.getElementById("change");
+var hidebutton = document.getElementById("hide");
+var showbutton = document.getElementById("show");
 var urn = document.getElementById("urn");
 
 
@@ -32,9 +33,8 @@ function urnshow() {
     urn.innerHTML = "Student URN: 6954010";
 }
 
-changebutton.addEventListener("click", urnhide);
-changebutton.addEventListener("click", urnshow);
-
+hidebutton.addEventListener("click", urnhide);
+showbutton.addEventListener("click", urnshow)
 
 
 
