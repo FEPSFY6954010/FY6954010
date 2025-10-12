@@ -19,22 +19,23 @@ button.addEventListener("click", changeColour);
 
 // Making identifying button for URN html
 
-var button1 = document.getElementById("clear");
+var changebutton = document.getElementById("change");
 var urn = document.getElementById("urn");
 
 
 // Text change function
-function urnClear() {
+function urnhide() {
     urn.innerHTML = "";
 }
 
-button1.addEventListener("click", urnClear);
-
-function urnAppear() {
+function urnshow() {
     urn.innerHTML = "Student URN: 6954010";
 }
 
-button1.addEventListener("click", urnAppear)
+changebutton.addEventListener("click", urnhide);
+changebutton.addEventListener("click", urnshow);
+
+
 
 
 
