@@ -37,6 +37,12 @@ function urnshow() {
 
 showbutton.addEventListener("click", urnshow);
 
+if (urn.innerHTML = "") {
+    alert("The URN is already hidden!")
+} else {
+    alert("The URN is already shown!")
+}
+
 
 
 
