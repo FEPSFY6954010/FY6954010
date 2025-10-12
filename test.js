@@ -34,9 +34,7 @@ function urnAppear() {
     urn.innerHTML = "Student URN: 6954010";
 }
 
-if (urn.innerHTML = "") {
-    button1.addEventListener("click", urnAppear)
-}
+button1.addEventListener("click", urnAppear)
 
 
 
