@@ -29,12 +29,13 @@ function urnhide() {
     urn.innerHTML = "";
 }
 
+hidebutton.addEventListener("click", urnhide);
+
 function urnshow() {
     urn.innerHTML = "Student URN: 6954010";
 }
 
-hidebutton.addEventListener("click", urnhide);
-showbutton.addEventListener("click", urnshow)
+showbutton.addEventListener("click", urnshow);
 
 
 
