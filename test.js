@@ -21,13 +21,13 @@ button.addEventListener("click", changeColour);
 
 var button1 = document.getElementById("hide");
 var urn = document.getElementById("urn");
-
+var clear = "";
 
 function hide() {
-        urn.innerHTML = ""        
-    }
+    urn.innerHTML = clear
+}
 
-    button1.addEventListener("click", hide)
+button1.addEventListener("click", hide)
 
 
 
