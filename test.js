@@ -21,11 +21,11 @@ button.addEventListener("click", changeColour);
 
 var button1 = document.getElementById("clear");
 var urn = document.getElementById("urn");
-var clear = "Hello"
+
 
 // Text change function
 function urnClear() {
-    urn.innerHTML = clear;
+    urn.innerHTML = "Hello";
 }
 
 button1.addEventListener("click", urnClear);
