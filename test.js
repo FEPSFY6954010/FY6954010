@@ -25,10 +25,18 @@ var urn = document.getElementById("urn");
 
 // Text change function
 function urnClear() {
-    urn.innerHTML = "Hello";
+    urn.innerHTML = "";
 }
 
 button1.addEventListener("click", urnClear);
+
+function urnAppear() {
+    urn.innerHTML = "Student URN: 6954010";
+}
+
+if (urn.innerHTML = "") {
+    button1.addEventListener("click", urnAppear)
+}
 
 
 
