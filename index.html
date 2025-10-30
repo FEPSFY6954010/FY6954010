@@ -118,7 +118,7 @@
   in a modern world heavily reliant on wireless devices for means of finance, communication, data storage, entertainment and general productivity. However, despite the ex-
   tensive good these devices have brought and continue to bring society, their greatest strength in being wireless is arguably their greatest weakness, with several recent
   attacks on internet connected devices (IoT devices) demonstrating this, and the potential consequences of these type of attacks resulting in damage to expensive equipme- 
-  nt or even loss of life <a href="#References">(Papp et al., 2019)</a>. The aim for this article is   
+  nt or even loss of life <a href="#References">(Papp et al., 2019)</a>. The aim for this article is  
   </pre>
 
 
@@ -197,7 +197,6 @@
     window.onload = getLastUpdatedTime;
 </script>
 
-
  <!-- //////////////////////////////////////////////////////////////////////////////// -->
   <!-- ////////////////////////////// Word count function ////////////////////////////// -->
   <!-- //////////////////////////////////////////////////////////////////////////////// -->
@@ -206,10 +205,12 @@
 <hr>
 <script>
   // Function to calculate and display word count for a specified section
-  function displayWordCount(Introduction_InText) {
+  function displayWordCount(sectionId) {
     // Get the text content from the specified section
-    const text = document.getElementById(Introduction_InText).textContent;
-    // Split text into words based on spaces and filter out any empty strings
+    const element = document.getElementById(sectionId);
+if (!element) return 0; // Skip if not found
+const text = element.textContent || "";
+        // Split text into words based on spaces and filter out any empty strings
     const wordArray = text.trim().split(/\s+/);
     // Count the words
     const wordCount = wordArray.length;
@@ -219,16 +220,19 @@
   // Function to calculate and display total word count from selected sections
   function displayTotalWordCount() {
     // Calculate word count for each section and accumulate the total
-    const IntroductionCount = displayWordCount("Introduction");
-    const AnalysisCount = displayWordCount("Analysis");
+    const IntroductionCount = displayWordCount("Introduction_InText");
+    const AnalysisCount = displayWordCount("Analysis_InText");
+    const ReferencesCount = displayWordCount("References_InText");
+    const AbstractCount = displayWordCount("Abstract_InText");
     // Calculate the sum of all selected sections
-    const totalWordCount = IntroductionCount + AnalysisCount;
+    const totalWordCount = IntroductionCount + AnalysisCount + ReferencesCount + AbstractCount;
     // Display the total word count
     document.getElementById("totalWordCount").innerText = `Total word count: ${totalWordCount}`;
   }
   // Run the function for specific sections and display total count when the page loads
   window.onload = displayTotalWordCount;
 </script>
+
 
 
     
