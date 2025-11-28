@@ -222,7 +222,7 @@ const text = element.textContent || "";
     const ReferencesCount = displayWordCount("References");
     const AbstractCount = displayWordCount("Abstract");
     // Calculate the sum of all selected sections
-    const totalWordCount = ReferencesCount + AbstractCount;
+    const totalWordCount = IntroductionCount + AnalysisCount + ReferencesCount + AbstractCount;
     // Display the total word count
     document.getElementById("totalWordCount").innerText = `Total word count: ${totalWordCount}`;
   }
