@@ -126,9 +126,7 @@
     <hr>
     <h3 id="Analysis_and_discussion">Analysis and discussion</h3>
     <p class="ex1">
-    <p>
-    
-    </p>
+
     </p>
 
 
@@ -223,7 +221,7 @@ const text = element.textContent || "";
     const ReferencesCount = displayWordCount("References");
     const AbstractCount = displayWordCount("Abstract");
     // Calculate the sum of all selected sections
-    const totalWordCount = IntroductionCount + AnalysisCount + ReferencesCount + AbstractCount;
+    const totalWordCount = IntroductionCount + AnalysisCount;
     // Display the total word count
     document.getElementById("totalWordCount").innerText = `Total word count: ${totalWordCount}`;
   }
