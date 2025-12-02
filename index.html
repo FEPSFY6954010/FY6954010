@@ -11,6 +11,14 @@
   <img src="WebBanner2023.png" alt="Banner" width="681" height="113">
   </head>
 
+      <style>
+        .flex-container {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+    </style>
+
   
   <!--Titles and URN-->
 
@@ -136,10 +144,14 @@
     <p>
     The primary aim of this stage is to obtain as much publicly available information on the target device as possible, making use of the internet as well as model and serial numbers printed on the device to identify datasheets and manuals with valuable information on the device's specifications. It's also important to note that all wireless devices used and or produced in the US have an FCC ID printed on them which can be used on the FCC database site to obtain information surpassing datasheets. For further inspection it's also vital to identify: the power requirements of the device, more specifically, polarity, current and voltage levels, as well as any tamper protection to avoid causing irreparable damage to the device. Below is an example of this Stage in action using my HP X200 Wireless mouse.  
     </p>
-    <p>
-      <img src="X200mousespecs.jpg"  width="288" height="482" alt="">
-      Looking at the back label on the mouse we can identify the FCC ID of the mouse as PRDMU75 and look this up on the FCC ID database (fcc.gov)
-    </p>
+    <div class="flex-container">
+        <img src="X200mousespecs.jpg" 
+            alt="Flex Image" width="150" height="100">
+        <p>The image and text are aligned side
+            by side using Flexbox, allowing for
+            a flexible layout.
+        </p>
+    </div>
 
 
 
