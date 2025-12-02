@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+
+<html>
+
+  
+<!--banner-->
+
+
+  
+  <head>
+  <img src="WebBanner2023.png" alt="Banner" width="681" height="113">
+  </head>
+  
+
+  
+  <!--Titles and URN-->
+
+
+  
+   <h1><b>ENG0018 Computer Laboratory 2025/26</b></h1>
+   <h2>Student URN: 6954010</h2>
+ 
+  <hr>
+  <h2 style=”font-family:calibri:”><b>Conference paper | Hardware hacking: How easy are breaches?</b></h2>
+  <hr>
+  
+     
+  
+  
+  <!--style for tables-->
+
+  
+  <style>
+    table {
+      font-family: arial, sans-serif;
+      border-collapse: collapse;
+      width: 30%;
+
+    }
+
+    td, th {
+      border: 1px solid #dddddd;
+      text-align: left; 
+      padding: 8px;
+    }
+
+    tr:nth-child(even) {
+      background-color: #dddddd
+    }
+      
+  
+  
+  
+  </style>
+
+  <style>
+    p.ex1 {
+      margin-left: 250px;
+    }
+  </style>
+</head>
+ 
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet"href="https://www.w3schools.com/w3css/4/w3.css">
+    <style>
+      .mySlides {display:none;} 
+    </style>
+  <body style="background-color:#FFFFFF;margin-left:50px;">
+
+
+
+<!--table of contents-->
+
+
+    
+    <table class="ex1">
+    
+    <tr>
+    <th><h3>Table of contents</h3></th>
+    </tr>
+    <tr>
+    <td><a href="#Abstract">Abstract</a></td>
+    </tr>
+    <tr>
+    <td><a href="#Introduction">Introduction</a></td>
+    </tr>
+    <tr>
+    <td><a href="#Analysis_and_discussion">Analysis and discussion</a></td>
+    </tr>
+    <tr>
+    <td><a href="#References">References</a></td>
+    </tr>
+    </table>
+    
+    
+    <!--Abstract section-->
+
+
+  <hr>
+  <h3 id="Abstract"><u><b>Abstract</b></u></h3> 
+  <p class="ex1">
+  </p>
+  <p>
+  Could this be the problem?
+  </p>
+
+
+    
+  <!--Introduction section-->
+
+
+    
+  <hr>
+  <h3 id="Introduction"><u><b>Introduction</b></u></h3>
+  <p class="ex1">
+  </p>
+  <p>
+  Criminals have thought up ways, for a variety of reasons, of gaining unauthorised access into just about anything for centuries. This overarching threat is ever-present in a modern world heavily reliant on wireless devices for means of finance, communication, data storage, entertainment and general productivity. However, despite the extensive good these devices have brought and continue to bring society, their greatest strength in being wireless is paradoxically their greatest weakness, with several recent attacks on internet connected devices (IoT devices) demonstrating this, and the potential consequences of these type of attacks resulting in damage to expensive equipment or even loss of life <a href="#References">(Papp et al., 2019)</a>. The aim of this article is to emphasise the vulnerabilities in both every day and industrial machines and devices, presenting the means of discovering these vulnerabilities, as well as reflecting on two cases of real-world hardware security breaches in the Iranian nuclear centrifuge destroying Stuxnet worm and a very recent, at the time of writing, loophole discovered in modern contactless payments by the University of Surrey in collaboration with the University of Birmingham.
+  </p>
+
+
+
+    <!--Analysis and discussion section-->
+
+
+    
+    <hr>
+    <h3 id="Analysis_and_discussion"><u><b>Discussion</b></u></h3>
+    <p class="ex1">
+    </p>
+    <hr>
+    <h4><u><b><i>Hardware Hacking: A brief overview</i></b></u></h4>
+    <p>
+    The first step in tricking an electronic device into doing what we want is first understanding how it 'thinks' and how it 'acts'. Deep understanding of a device's inner workings aids in finding potential design flaws that can be exploited to freely alter the device's function, often, but not always, for nefarious means. We get this understanding through the process of hardware inspection which is done in the two to three stages summarised below.  
+    </p>
+    <h4><b><i>Stage 1: Hardware Reconnaisance</i></b></h4>
+    <p>
+    The primary aim of this stage is to obtain as much publicly available information on the target device as possible, making use of the internet as well as model and serial numbers printed on the device to identify datasheets and manuals with valuable information on the device's specifications. It's also important to note that all wireless devices used and or produced in the US have an FCC ID printed on them which can be used on the FCC database site to obtain information surpassing datasheets. For further inspection it's also vital to identify: the power requirements of the device, more specifically, polarity, current and voltage levels, as well as any tamper protection to avoid causing irreparable damage to the device. Below is an example of this Stage in action using my HP X200 Wireless mouse.  
+    </p>
+    <img src="X200mousespecs.jpg" width="289" height="483" alt="">
+    <p>Flexbox is a powerful layout module that allows you to align items in a flexible and responsive manner. Here's how you can use it to align text and an image side by side:</p>
+
+
+
+    
+    
+
+
+
+
+    
+
+
+    <!--References section-->
+
+
+    
+    <hr>
+    <h3 id="References"><u><b>References</b></u></h3>
+    <p class="ex1">
+    </p>
+    <p>
+    <a href="https://www.infocommunications.hu/documents/169298/4609457/InfocomJ_2019_2_1_Papp.pdf" target="_blank">Papp, D., Tamás, K. and Buttyán, L. (2019). IoT Hacking – A Primer. Infocommunications Journal, (2), pp.2–13. doi:https://doi.org/10.36244/icj.2019.2.1. (PDF)</a>
+    </p>
+ 
+    <hr>
+
+    <!-- //////////////////////////////////////////////////////////////////////////////// -->
+  <!-- ////////////////////////////// Adding last update ////////////////////////////// -->
+  <!-- //////////////////////////////////////////////////////////////////////////////// -->
+    <!-- Last commit time display -->
+<div id="last-updated">Loading last update time...</div>
+<!-- Verify Button -->
+<button onclick="verifyLastUpdatedTime()" style="display: block; margin: 10px auto; padding: 8px 16px;">
+    Verify Last Modified Time
+</button>
+<script>
+    async function getLastUpdatedTime() {
+        const username = 'FEPSFY6954010';
+        const repo = 'FY6954010';
+       
+        const url = `https://api.github.com/repos/${username}/${repo}/commits`;
+        try {
+            const response = await fetch(url, {
+                method: 'GET',
+                headers: {
+                    'Accept': 'application/vnd.github.v3+json',
+                }
+            });
+            if (!response.ok) {
+                throw new Error(`Error fetching data: ${response.status} - ${response.statusText}`);
+            }
+            const commits = await response.json();
+            if (commits && commits.length > 0) {
+                const lastCommitDate = new Date(commits[0].commit.committer.date);
+               
+                // Displaying the time on load
+                document.getElementById('last-updated').innerText = `Last Modified Time: ${lastCommitDate.toLocaleString()}`;
+            } else {
+                document.getElementById('last-updated').innerText = 'No commits found in the repository.';
+            }
+        } catch (error) {
+            console.error('Error fetching the last updated time:', error);
+            document.getElementById('last-updated').innerText = 'Error fetching update time. Please check the repository details.';
+        }
+    }
+    // Function to verify the last update time by re-fetching it from the API
+    async function verifyLastUpdatedTime() {
+        document.getElementById('last-updated').innerText = 'Verifying...';
+        await getLastUpdatedTime();
+        alert("Last modified time has been successfully verified from GitHub API.");
+    }
+    // Initial load to display the time on page load
+    window.onload = getLastUpdatedTime;
+</script>
+
+ <!-- //////////////////////////////////////////////////////////////////////////////// -->
+  <!-- ////////////////////////////// Word count function ////////////////////////////// -->
+  <!-- //////////////////////////////////////////////////////////////////////////////// -->
+<!-- Placeholder for total word count -->
+<p id="totalWordCount"></p>
+<hr>
+<script>
+  // Function to calculate and display word count for a specified section
+  function displayWordCount(sectionId) {
+    // Get the text content from the specified section
+    const element = document.getElementById(sectionId);
+if (!element) return 0; // Skip if not found
+const text = element.textContent || "";
+        // Split text into words based on spaces and filter out any empty strings
+    const wordArray = text.trim().split(/\s+/);
+    // Count the words
+    const wordCount = wordArray.length;
+    // Return the word count for summing purposes
+    return wordCount;
+  }
+  // Function to calculate and display total word count from selected sections
+  function displayTotalWordCount() {
+    // Calculate word count for each section and accumulate the total
+    const IntroductionCount = displayWordCount("Introduction");
+    const AnalysisCount = displayWordCount("Analysis_and_discussion");
+    const ReferencesCount = displayWordCount("References");
+    const AbstractCount = displayWordCount("Abstract");
+    // Calculate the sum of all selected sections
+    const totalWordCount = IntroductionCount + AnalysisCount + ReferencesCount + AbstractCount;
+    // Display the total word count
+    document.getElementById("totalWordCount").innerText = `Total word count: ${totalWordCount}`;
+  }
+  // Run the function for specific sections and display total count when the page loads
+  window.onload = displayTotalWordCount;
+</script>
+
+
+
+    
+    
+    
+    
+  
+ 
+</html>
