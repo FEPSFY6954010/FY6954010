@@ -201,41 +201,6 @@ The primary aim of this stage is to obtain as much publicly available informatio
     window.onload = getLastUpdatedTime;
 </script>
 
- <!-- //////////////////////////////////////////////////////////////////////////////// -->
-  <!-- ////////////////////////////// Word count function ////////////////////////////// -->
-  <!-- //////////////////////////////////////////////////////////////////////////////// -->
-<!-- Placeholder for total word count -->
-<p id="totalWordCount"></p>
-<hr>
-<script>
-  // Function to calculate and display word count for a specified section
-  function displayWordCount(sectionId) {
-    // Get the text content from the specified section
-    const element = document.getElementById(sectionId);
-if (!element) return 0; // Skip if not found
-const text = element.textContent || "";
-        // Split text into words based on spaces and filter out any empty strings
-    const wordArray = text.trim().split(/\s+/);
-    // Count the words
-    const wordCount = wordArray.length;
-    // Return the word count for summing purposes
-    return wordCount;
-  }
-  // Function to calculate and display total word count from selected sections
-  function displayTotalWordCount() {
-    // Calculate word count for each section and accumulate the total
-    const IntroductionCount = displayWordCount("Introduction");
-    const AnalysisCount = displayWordCount("Analysis_and_discussion");
-    const ReferencesCount = displayWordCount("References");
-    const AbstractCount = displayWordCount("Abstract");
-    // Calculate the sum of all selected sections
-    const totalWordCount = IntroductionCount + AnalysisCount + ReferencesCount + AbstractCount;
-    // Display the total word count
-    document.getElementById("totalWordCount").innerText = `Total word count: ${totalWordCount}`;
-  }
-  // Run the function for specific sections and display total count when the page loads
-  window.onload = displayTotalWordCount;
-</script>
 
 
 
