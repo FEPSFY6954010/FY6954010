@@ -225,9 +225,9 @@ This is the most technical stage of hardware inspection as it often requires som
 <hr>
 <script>
   // Function to calculate and display word count for a specified section
-  function displayWordCount(sectionClass, outputClass) {
+  function displayWordCount(ClassName, outputClass) {
     // Get the text content from the specified section
-    const text = document.getElementsByClassName(sectionClass).textContent;
+    const text = document.getElementsByClassName(ClassName).textContent;
     // Split text into words based on spaces and filter out any empty strings
     const wordArray = text.trim().split(/\s+/);
     // Count the words
@@ -243,7 +243,7 @@ This is the most technical stage of hardware inspection as it often requires som
     // Calculate the sum of all selected sections
     const totalWordCount = IntroductionCount;
     // Display the total word count
-    document.getElementById("totalWordCount").innerText = `Total word count: ${totalWordCount}`;
+    document.getElementsByClassName("totalWordCount").innerText = `Total word count: ${totalWordCount}`;
   }
   // Run the function for specific sections and display total count when the page loads
   window.onload = displayTotalWordCount;
