@@ -109,9 +109,11 @@ Could this be the problem?
 <h3 id="Introduction"><u><b>Introduction</b></u></h3>
 <p class="ex1">  
 </p>
-<p id="IntTXT">
+<div class="IntTXT">
+<p>
 Criminals have thought up ways, for a variety of reasons, of gaining unauthorised access into about anything for centuries. This overarching threat is ever-present in a modern world heavily reliant on electronic devices for means of finance, communication, data storage, entertainment, and general productivity. However, despite the extensive good these devices have brought and continue to bring society, their greatest strength in being electronic (as opposed to mechanical) is paradoxically their greatest weakness, with several recent attacks on internet connected (electronic) devices (IoT devices) demonstrating this, and the potential consequences of these type of attacks resulting in damage to expensive equipment or even loss of life <a href="#References">(Papp et al., 2019)</a>. The aim of this article is to present the means of discovering and exploiting electronic devices, as well as emphasising the need for strong encryption through the evaluation of a past security breach that resulted in the destruction of thousands of industrial machines.
 </p>
+</div>
 
 
 <!--Analysis and discussion section-->
@@ -224,9 +226,9 @@ This is the most technical stage of hardware inspection as it often requires som
 <hr>
 <script>
   // Function to calculate and display word count for a specified section
-  function displayWordCount(sectionId, outputId) {
+  function displayWordCount(sectionClass, outputClass) {
     // Get the text content from the specified section
-    const text = document.getElementById(sectionId).textContent;
+    const text = document.getElementsByClassName(sectionClass).textContent;
     // Split text into words based on spaces and filter out any empty strings
     const wordArray = text.trim().split(/\s+/);
     // Count the words
@@ -240,7 +242,7 @@ This is the most technical stage of hardware inspection as it often requires som
     const IntroductionCount = displayWordCount("IntTXT");
     const AnalysisCount = displayWordCount("DiscTXT");
     // Calculate the sum of all selected sections
-    const totalWordCount = IntroductionCount+AnalysisCount;
+    const totalWordCount = IntroductionCount;
     // Display the total word count
     document.getElementById("totalWordCount").innerText = `Total word count: ${totalWordCount}`;
   }
