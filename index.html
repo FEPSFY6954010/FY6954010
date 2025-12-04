@@ -109,7 +109,7 @@ Could this be the problem?
 <h3 id="Introduction"><u><b>Introduction</b></u></h3>
 <p class="ex1">  
 </p>
-<p>
+<p id="IntTXT">
 Criminals have thought up ways, for a variety of reasons, of gaining unauthorised access into about anything for centuries. This overarching threat is ever-present in a modern world heavily reliant on electronic devices for means of finance, communication, data storage, entertainment, and general productivity. However, despite the extensive good these devices have brought and continue to bring society, their greatest strength in being electronic (as opposed to mechanical) is paradoxically their greatest weakness, with several recent attacks on internet connected (electronic) devices (IoT devices) demonstrating this, and the potential consequences of these type of attacks resulting in damage to expensive equipment or even loss of life <a href="#References">(Papp et al., 2019)</a>. The aim of this article is to present the means of discovering and exploiting electronic devices, as well as emphasising the need for strong encryption through the evaluation of a past security breach that resulted in the destruction of thousands of industrial machines.
 </p>
 
@@ -122,19 +122,19 @@ Criminals have thought up ways, for a variety of reasons, of gaining unauthorise
 <p class="ex1">  
 </p>
 <hr>
-<h4><u><b><i>Hardware Hacking: A brief overview</i></b></u></h4>
-<p>
+<h4 id="DiscTXT"><u><b><i>Hardware Hacking: A brief overview</i></b></u></h4>
+<p id="DiscTXT">
 The first step in tricking an electronic device into doing what we want is first understanding how it 'thinks' and how it 'acts'. Deep understanding of a device's inner workings aids in finding potential design flaws that can be exploited to freely alter the device's function, often, but not always, for nefarious means. We get this understanding through the process of hardware inspection which is done in the two main stages summarised below.
 </p>
 
-<h4><b><i>Stage 1: Hardware Reconnaissance</i></b></h4>
-<p>
+<h4 id="DiscTXT"><b><i>Stage 1: Hardware Reconnaissance</i></b></h4>
+<p id="DiscTXT">
 The primary aim of this stage is to obtain as much publicly available information on the target device as possible, making use of the internet as well as model and serial numbers printed on the device to identify datasheets and manuals with valuable information on the device's specifications. It's also important to note that all wireless devices used and or produced in the US have an FCC ID printed on them which can be used on the <a href="#2">FCC database site</a> to obtain information surpassing datasheets. For further inspection it's also vital to identify: the power requirements of the device, more specifically, polarity, current and voltage levels, as well as any tamper protection to avoid causing irreparable damage to the device. Below is a demonstration of this stage in action using my HP X200 Wireless mouse.
 </p>
 
 <div class="image-text-container">
   <img src="X200mousespecs.jpg" alt="">
-  <p>
+  <p id="DiscTXT">
   Boxed in green and blue in <b><i>Figure 1.</i></b>, is the mouse model and FCC ID, respectively. As mentioned, we can use the identified FCC ID of PRDMU75 on the <a href="#2">FCC database site</a> to find detailed technical information on the mouse such as component disassembly, test reports among other specs vital in understanding the workings of the mouse. <a href="#fig2"><b><i>Figure 2.</i></b></a> below outlines the FCC ID search process. <br><br> Note how the Block Diagram, Operational Description and Schematics from the summary are missing in the detailed list. As hinted by the apps.fcc.gov window alert, the three omitted files are classified, likely at the request of HP to make reverse engineering more difficult, protecting against replicas being made and sold for profit. Despite this, the available files still provide useful information for exploits, notably using the technical information surrounding the operational frequency which is in Bluetooth range(). Due to the missing schematics, any practical reverse engineering would need to be carried out using the second stage of the hardware inspection process.   
   </p>
   
@@ -145,11 +145,12 @@ The primary aim of this stage is to obtain as much publicly available informatio
 <img src="fccgraphic.png" alt="">
 <p id="fig2"><b></b><i>Figure 2.</i></b> A diagram displaying the FCC search process</p>
 <hr>
-<h4><b><i>Stage 2: Disassembly & Component inspection</i></b></h4>
-<p>
+<h4 id="DiscTXT"><b><i>Stage 2: Disassembly & Component inspection</i></b></h4>
+<p id="DiscTXT">
 This is the most technical stage of hardware inspection as it often requires some background in electrical engineering (Papp et al), as well as disassembling the target device. For ease of reassembly photos and notes must be taken throughout the process. Once opened, the target device's chips, pins and interfaces can be identified and, with the aid of web databases, the specific functions of the components, like memory for example, can be found. Interfaces (communication interfaces) are commonly focused on by bad actors as they are the mechanism through which the components of a system exchange information. This means that interception and replacement of transmitted binary information (code) can 'fool' a device given its operation is based off binary instructions passed between its components. This security issue is addressed using public-key cryptography, more specifically with digital signatures which act as a means of information validation in order to prevent the execution of modified code. The concept of public-key encryption is briefly summarised below.  
 </p>
-<h4><b><i>Public-key cryptography</i></b></h4>
+<h4 id="DiscTXT"><b><i>Public-key cryptography</i></b></h4>
+
 <hr>
 <h3 id="References"><u><b>References</b></u></h3>
 <p class="ex1">  
@@ -213,7 +214,37 @@ This is the most technical stage of hardware inspection as it often requires som
     window.onload = getLastUpdatedTime;
 </script>
 
-
+<!-- //////////////////////////////////////////////////////////////////////////////// -->
+  <!-- ////////////////////////////// Word count function ////////////////////////////// -->
+  <!-- //////////////////////////////////////////////////////////////////////////////// -->
+<!-- Placeholder for total word count -->
+<p id="totalWordCount"></p>
+<hr>
+<script>
+  // Function to calculate and display word count for a specified section
+  function displayWordCount(sectionId, outputId) {
+    // Get the text content from the specified section
+    const text = document.getElementById(sectionId).textContent;
+    // Split text into words based on spaces and filter out any empty strings
+    const wordArray = text.trim().split(/\s+/);
+    // Count the words
+    const wordCount = wordArray.length;
+    // Return the word count for summing purposes
+    return wordCount;
+  }
+  // Function to calculate and display total word count from selected sections
+  function displayTotalWordCount() {
+    // Calculate word count for each section and accumulate the total
+    const IntroductionCount = displayWordCount("IntTXT");
+    const AnalysisCount = displayWordCount("DiscTXT");
+    // Calculate the sum of all selected sections
+    const totalWordCount = IntroductionCount + AnalysisCount;
+    // Display the total word count
+    document.getElementById("totalWordCount").innerText = `Total word count: ${totalWordCount}`;
+  }
+  // Run the function for specific sections and display total count when the page loads
+  window.onload = displayTotalWordCount;
+</script>
 
 
 
