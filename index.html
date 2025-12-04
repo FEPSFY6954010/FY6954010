@@ -217,6 +217,11 @@ This is the most technical stage of hardware inspection as it often requires som
     window.onload = getLastUpdatedTime;
 </script>
 
+
+<!-- //////////////////////////////////////////////////////////////////////////////// -->
+  <!-- ////////////////////////////// Word count function ////////////////////////////// -->
+  <!-- //////////////////////////////////////////////////////////////////////////////// -->
+<!-- Placeholder for total word count -->
 <p id="totalWordCount"></p>
 <hr>
 <script>
@@ -224,6 +229,7 @@ function countWordsInElements(className) {
     const elements = document.getElementsByClassName(className);
     let total = 0;
 
+    //Loop through each element and count words
     for (let el of elements) {
         const text = el.textContent.trim().split(/\s+/);
         total += text.filter(word => word.length > 0).length;
@@ -231,15 +237,20 @@ function countWordsInElements(className) {
     return total;
 }
 
+// Function to calculate and display total word count from selected sections
 function displayTotalWordCount() {
+  // Calculate word count for each section and accumulate the total
     const IntroductionCount = countWordsInElements("IntTXT");
     const AnalysisCount = countWordsInElements("DiscTXT");
 
+    // Calculate the sum of all selected sections
     const total = IntroductionCount + AnalysisCount;
 
+    // Display the total word count
     document.getElementById("totalWordCount").innerText =
         `Total word count: ${total}`;
 }
+// Run the function for specific sections and display total count when the page loads
 window.onload = displayTotalWordCount;
 </script>
 
