@@ -152,14 +152,12 @@ This is the most technical stage of hardware inspection as it often requires som
 </p>
 <h4 class="DiscTXT"><u><b><i>Public-key cryptography</i></b></u></h4>
 <p class="DiscTXT">
-Public-key encryption is a cryptographic system which uses a pair of mathematically linked keys (public and private) to encrypt and decrypt data respectively, with a key simply being a string of data acting like a password to lock or unlock encrypted information (IBM, 2025). Digital signatures make use of this system by enabling senders to sign information with their private keys and anyone with the public key to both confirm the sender’s identity, as well as the data’s integrity (IBM, 2025) which proves to be crucial when securing industrial machines running on Programmable Logic Controllers (PLCs), a lesson learned after Stuxnet.
+Public-key encryption is a cryptographic system which uses a pair of mathematically linked keys (public and private) to encrypt and decrypt data respectively, with a key simply being a string of data acting like a password to lock or unlock encrypted information <b><a href="#5">(IBM, 2025)</a></b>. Digital signatures make use of this system by enabling senders to sign information with their private keys and anyone with the public key to both confirm the sender's identity, as well as the data's integrity <b><a href="#5">(IBM, 2025)</a></b> which proves to be crucial when securing industrial machines running on Programmable Logic Controllers (PLCs), a lesson learned after Stuxnet.
 </p>
 <h4 class="DiscTXT"><u><b><i>Stuxnet & Conclusion</i></b></u></h4>
 <p class="DiscTXT">
 Stuxnet is a malicious computer virus which resulted in the destruction of roughly 1,000 Iranian uranium enrichment centrifuges between 2009 and 2010 and was the first major case of cyber-attack induced industrial destruction. This catastrophe can largely be attributed to security faults in the Siemens S7 PLCs that controlled the centrifuges, more specifically, the absence of digital signatures in their communication interface (S7comm) to verify code integrity. Without this, as well as other encryption methods, the PLCs ran malicious code that spun nuclear centrifuges to failure, setting back the Iranian nuclear regime. It is also important to note that the Iranians believed their facility was safe due to it being air gapped (not connected to the internet) which makes this attack a stark reminder of the power hardware inspection in identifying vulnerabilities. Since the attack, PLCs as well as other critical computer-run infrastructure have adopted digital signatures for software verification. 
 </p>
-<img id="fig3" src="stuxnet.png" alt="">
-
 <hr>
 <h3 id="References"><u><b>References</b></u></h3>
 <p class="ex1">  
