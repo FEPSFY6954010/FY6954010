@@ -155,13 +155,10 @@ This is the most technical stage of hardware inspection as it often requires som
 Public-key encryption is a cryptographic system which uses a pair of mathematically linked keys (public and private) to encrypt and decrypt data respectively, with a key simply being a string of data acting like a password to lock or unlock encrypted information (IBM, 2025). Digital signatures make use of this system by enabling senders to sign information with their private keys and anyone with the public key to both confirm the sender’s identity, as well as the data’s integrity (IBM, 2025) which proves to be crucial when securing industrial machines running on Programmable Logic Controllers (PLCs), a lesson learned after Stuxnet.
 </p>
 <h4 class="DiscTXT"><u><b><i>Stuxnet & Conclusion</i></b></u></h4>
-<div class="image-text-container">
-  <img id="fig1" src="Stuxnet.png" alt="">
-  <p class="DiscTXT">
-  Boxed in green and blue in <a href="#fig1"><b><i>Figure 1.</i></b></a>, is the mouse model and FCC ID, respectively. As mentioned, we can use the identified FCC ID of PRDMU75 on the <a href="#2">FCC database site</a> to find detailed technical information on the mouse such as component disassembly, test reports among other specs vital in understanding the workings of the mouse. <a href="#fig2"><b><i>Figure 2.</i></b></a> below outlines the FCC ID search process. <br><br> Note how the Block Diagram, Operational Description and Schematics from the summary are missing in the detailed list. As hinted by the apps.fcc.gov window alert, the three omitted files are classified, likely at the request of HP to make reverse engineering more difficult, protecting against replicas being made and sold for profit. Despite this, the available files still provide useful information for exploits, notably using the technical information surrounding the operational frequency which is in Bluetooth range <a href="#4">(2400-2483.5MHz)</a> <b><a href="#3">(Bureau Veritas Consumer Products Services, 2019)</a></b>. Due to the missing schematics, any practical reverse engineering would need to be carried out using the second stage of the hardware inspection process.   
-  </p>
-  
-</div>
+<p class="DiscTXT">
+Stuxnet is a malicious computer virus which resulted in the destruction of roughly 1,000 Iranian uranium enrichment centrifuges between 2009 and 2010 and was the first major case of cyber-attack induced industrial destruction. This catastrophe can largely be attributed to security faults in the Siemens S7 PLCs that controlled the centrifuges, more specifically, the absence of digital signatures in their communication interface (S7comm) to verify code integrity. Without this, as well as other encryption methods, the PLCs ran malicious code that spun nuclear centrifuges to failure, setting back the Iranian nuclear regime. It is also important to note that the Iranians believed their facility was safe due to it being air gapped (not connected to the internet) which makes this attack a stark reminder of the power hardware inspection in identifying vulnerabilities. Since the attack, PLCs as well as other critical computer-run infrastructure has adopted digital signatures for software verification. 
+</p>
+<img id="fig3" src="stuxnet.png" alt="">
 <hr>
 <h3 id="References"><u><b>References</b></u></h3>
 <p class="ex1">  
